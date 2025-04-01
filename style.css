@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Monument Extended'),
+         url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Monument Extended'),
+         url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff') format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+
+html body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+body #main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#main #nav {
+    margin-top: 2%;
+    padding-left: 3%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* background-color: teal; */
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#nav h2 {
+    position: inherit;
+    font-size: 16px;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    width: 25%;
+    transition: box-shadow 0.15s;
+}
+
+#nav h2:nth-last-child(1) {
+    border-right: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#nav h1 {
+    font-family: "Monument Extended";
+    letter-spacing: -1.5px;
+    font-size: 36px;
+}
+
+#nav h1::after {
+    content: "©";
+    position: absolute;
+    font-size: 16px;
+    font-family: "gilroy";
+    font-weight: 1000;
+    top: 16px;
+    left: 234px;
+}
+
+#nav h1::before{
+    content: "model management";
+    color: grey;
+    position: absolute;
+    font-size: 11px;
+    font-family: "gilroy";
+    font-weight: 1500;
+    letter-spacing: -0.1px;
+    top: 50px;
+    left: 126px;
+}
+
+#nav h2:hover {
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+}
+
+#nav h2:active {
+    color:gray;
+}
+
+body #slide {
+    width: 100%;
+    max-width: 100vw;
+    height: 42vh;
+    position: relative;
+}
+
+#slide video {
+    padding: 40px 80px;
+    width: 100%;
+    max-width: 100vw;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+}
+
+#text h3 {
+    position: absolute;
+    font-family: "Monument Extended";
+    top: 120%;
+    left: 10%;
+    color: white;
+    font-size: 40px;
+    width: 400px;
+}
+
+#text h3::after {
+    position: absolute;
+    content: "01";
+    padding: 25px 25px;
+    font-family: "gilroy";
+    font-size: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    left: 287%;
+    top: 0%;
+}
+
+#text h4 {
+    position: absolute;
+    width: 80%;
+    padding-top: 20px;
+    top: 160%;
+    left: 10%;
+    color: white;
+    font-size: 16px;
+    border-top: 2px solid white;
+    transition: color 0.15s;
+}
+
+#text h4::after {
+    position: absolute;
+    width: 80%;
+    content: "\2192";
+    left: 96.3%;
+    top: 10%;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#text h4:hover {
+    color: lightgray;
+    cursor: pointer;
+}
+
+#text h4:active {
+    color: slategrey;
+    font-size: 18px;
+}
+
+#main #marquee1 {
+    margin-top: 22%;
+    display: flex;
+    position: relative;
+    /* width: max-content*2; */
+    width: 4000px;
+    justify-content: space-between;
+    animation: marquee 120s linear infinite;
+}
+
+#main #marquee1 img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#main #marquee1 figcaption {
+    margin-left: 35px;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-2000px); /* Moves left by 1 image width + margin */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#main #letters1 {
+    position: absolute;
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 30px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main #letters1 .lt {
+    font-style: italic;
+    font-size: 15px;
+    padding: 7px 7px;
+    transition: border 0.15s;
+}
+
+#main #letters1 #all {
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+    transition: font-size 0.15s, font-style 0.15s;
+}
+
+#main #letters1 .lt:hover {
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#main #letters1 #all:hover {
+    font-size: 22px; 
+    font-style: bold; 
+    cursor: pointer;
+}
