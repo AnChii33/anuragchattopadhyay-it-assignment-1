@@ -202,7 +202,7 @@ body #slide {
         transform: translateX(0);
     }
     50% {
-        transform: translateX(-2000px); /* Moves left by 1 image width + margin */
+        transform: translateX(-2000px); 
     }
     100% {
         transform: translateX(0);
@@ -210,22 +210,26 @@ body #slide {
 }
 
 #main #letters1 {
+    font-style: italic;
+    font-style: bold;
     position: absolute;
     margin-top: 5%;
     width: 100%;
     display: flex;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    line-height: 1;
     padding: 30px 30px;
     align-items: center;
     justify-content: space-between;
 }
 
 #main #letters1 .lt {
-    font-style: italic;
     font-size: 15px;
     padding: 7px 7px;
-    transition: border 0.15s;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: border 0.15s, cursor 0.15s;
 }
 
 #main #letters1 #all {
@@ -245,4 +249,28 @@ body #slide {
     font-size: 22px; 
     font-style: bold; 
     cursor: pointer;
+}
+
+
+#main #imgs1 {
+    margin-top: 20%;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#main #imgs1 #part1 #img1 {
+    width: 100px;
+    height: 100px;
+}
+
+#main #imgs1 #part2 #img2 {
+    width: 100px;
+    height: 100px;
 }
